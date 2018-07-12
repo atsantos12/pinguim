@@ -1,0 +1,19 @@
+ int BUZZER = 10; // Ligar o buzzer (Som) no pino 10   
+  // Executado na inicialização do Arduino   
+  void setup(){   
+  pinMode(BUZZER,OUTPUT); // define o pino do buzzer como saída.   
+  }   
+  // Loop pincipal do Arduino   
+  void loop(){   
+  tone(10,100); //aqui sai o som   
+  /*   
+   o número 10 indica que o pino positivo do buzzer está na porta 10   
+   o número 300 é a frequência que será tocado   
+   o número 300 é a duração do som   
+  */    
+  delay(2000);    
+  tone(10,1200); //aqui sai o som   
+  delay(500);   
+  //tone(10,900,300); //aqui sai o som   
+  delay(2000);   
+  } 
