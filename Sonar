@@ -1,0 +1,30 @@
+// defines pins numbers
+const int trigPin = 30;
+const int echoPin = 22;
+
+// defines variables
+long duracao;
+int distancia;
+
+void setup() {
+pinMode(trigPin, OUTPUT); 
+pinMode(echoPin, INPUT); 
+
+Serial.begin(9600);
+}
+void loop() {
+
+digitalWrite(trigPin, LOW);
+delay(2);
+
+digitalWrite(trigPin, HIGH);
+delay(100);
+digitalWrite(trigPin, LOW);
+
+duracao = pulseIn(echoPin, HIGH);
+
+distancia= duracao*0.034/2;
+
+Serial.print("Distancia: ");
+Serial.println(distancia);
+}
